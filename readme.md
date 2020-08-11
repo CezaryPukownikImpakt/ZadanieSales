@@ -1,12 +1,13 @@
 # Zadanie rekrutacyjne, 
 
 ## git
-  - Sklonuj repozytorium na lokalny komputer,
+  - Utwórz fork tego repozytorium.
+  - Sklonuj sforkowane repozytorium na lokalny komputer,
   - Utwórz nowy branch o nazwie {imię}_{nazwisko}
   - Utwórz nowy katalog o nazwię {imię}_{nazwisko} w folderze "rozwiazania", w nim zamieść wszystkie pliki wynikowe oraz kod.
   - Rozwiąż zadania.
-  - Pliki z wynikami, oraz pliki z kodem dodaj do nowego brancha i prześlij do repozytorium.
-  - Wykonaj pull request do branch master.
+  - Pliki z wynikami oraz pliki z kodem dodaj do nowego brancha i prześlij do repozytorium.
+  - Wykonaj pull request z sforkowanego repozytorium do repozytorum CezaryPukownik/ZadanieSales.
 
 ## analiza, wnioskowanie, python, pandas
 
