@@ -11,14 +11,22 @@
 
 ## analiza, wnioskowanie, python, pandas
 
-W folderze "dane", znajduje się 12 plików csv zawierających dane sprzedażowe.
+W folderze "dane/", znajduje się 12 plików csv zawierających dane sprzedażowe dla każdego miesiąca 2019 roku.
 Wykonaj poniższe zadania.
 
 # Zadania:
-- Oblicz średnią, minimalną i maksymalną cenę dla każdego produktu i zapisz w osobnym pliku Excel. Wyciągnij, wnioski: Jaki produkt jest najdroższy itd.
-- Oblicz, całkowitą wartość sprzedaży dla każdego z produktów i zapisz w osobnym pliku Excel. Wyciągnij, wnioski.
-- Narysuj wykres, przedstawiający wartość sprzedaży po miesiącach. Wybierz odpowiedni rodzaj wykresu, Wyciągnij, wnioski. Który miesiąc jest najlepiej sprzedażowy itd.
-- Z kolumny "Purchase Address" wyodrębnij miasto, i wynik zapisz w kolumnie "City"
-- Narysuj wykres, przedstawiący wartość przedaży po miastach. Wybierz odpowiedni rodzaj wykresu, Wyciągnij wnioski.
-- Napisz krótkie podsumowanie analizy, formułując najważniejsze wnioski.
+1. Oblicz średnią, minimalną i maksymalną cenę dla każdego produktu i zapisz w osobnym pliku Excel. Wyciągnij, wnioski: Jaki produkt jest najdroższy itd.
+
+2. Oblicz jaki łączny przychód w 2019 roku, wygenerowały poszczególne produkty. Wynik zapisz w osobnym pliku Excel. Wyciągnij, wnioski.
+
+3. Narysuj wykres, przedstawiający wartość sprzedaży po miesiącach.
+  a) Dla wszystkich produktów,
+  b) Dla produktu, który przyniósł najwięcej przychodu w całym 2019 roku. 
+   Wybierz odpowiedni rodzaj wykresu, Wyciągnij, wnioski.
+   
+4. Z kolumny "Purchase Address" wyodrębnij miasto, i wynik zapisz w kolumnie "City"
+
+5. Narysuj wykres, przedstawiący wartość przedaży po miastach. Wybierz odpowiedni rodzaj wykresu, Wyciągnij wnioski.
+
+6. Napisz krótkie podsumowanie analizy formułując najważniejsze wnioski.
 
