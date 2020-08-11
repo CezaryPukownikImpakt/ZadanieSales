@@ -15,18 +15,19 @@ W folderze "dane/", znajduje się 12 plików csv zawierających dane sprzedażow
 Wykonaj poniższe zadania.
 
 # Zadania:
-1. Oblicz średnią, minimalną i maksymalną cenę dla każdego produktu i zapisz w osobnym pliku Excel. Wyciągnij, wnioski: Jaki produkt jest najdroższy itd.
 
-2. Oblicz jaki łączny przychód w 2019 roku, wygenerowały poszczególne produkty. Wynik zapisz w osobnym pliku Excel. Wyciągnij, wnioski.
+- Oblicz średnią, minimalną i maksymalną cenę dla każdego produktu i zapisz w osobnym pliku Excel. Wyciągnij, wnioski: Jaki produkt jest najdroższy itd.
 
-3. Narysuj wykres, przedstawiający wartość sprzedaży po miesiącach.
-  a) Dla wszystkich produktów,
-  b) Dla produktu, który przyniósł najwięcej przychodu w całym 2019 roku. 
-   Wybierz odpowiedni rodzaj wykresu, Wyciągnij, wnioski.
+- Oblicz jaki łączny przychód w 2019 roku, wygenerowały poszczególne produkty. Wynik zapisz w osobnym pliku Excel. Wyciągnij, wnioski.
+
+- Narysuj wykres, przedstawiający wartość sprzedaży po miesiącach.
+  - Dla wszystkich produktów,
+  - Dla produktu, który przyniósł najwięcej przychodu w całym 2019 roku. 
+  - Wybierz odpowiedni rodzaj wykresu, Wyciągnij, wnioski.
    
-4. Z kolumny "Purchase Address" wyodrębnij miasto, i wynik zapisz w kolumnie "City"
+- Z kolumny "Purchase Address" wyodrębnij miasto, i wynik zapisz w kolumnie "City"
 
-5. Narysuj wykres, przedstawiący wartość przedaży po miastach. Wybierz odpowiedni rodzaj wykresu, Wyciągnij wnioski.
+- Narysuj wykres, przedstawiący wartość przedaży po miastach. Wybierz odpowiedni rodzaj wykresu, Wyciągnij wnioski.
 
-6. Napisz krótkie podsumowanie analizy formułując najważniejsze wnioski.
+- Napisz krótkie podsumowanie analizy formułując najważniejsze wnioski.
 
