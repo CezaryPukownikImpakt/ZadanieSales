@@ -1,5 +1,7 @@
 # Zadanie rekrutacyjne, 
 
+new_branch-to_pull_request
+
 ## git
   - Sklonuj repozytorium na lokalny komputer,
   - Utwórz nowy branch o nazwie {imię}_{nazwisko}
