@@ -6,8 +6,8 @@
   - Utwórz nowy branch o nazwie {imię}_{nazwisko}
   - Utwórz nowy katalog o nazwię {imię}_{nazwisko} w folderze "rozwiazania", w nim zamieść wszystkie pliki wynikowe oraz kod.
   - Rozwiąż zadania.
-  - Pliki z wynikami oraz pliki z kodem dodaj do nowego brancha i prześlij do repozytorium.
-  - Wykonaj pull request z sforkowanego repozytorium do repozytorum CezaryPukownik/ZadanieSales.
+  - Pliki z wynikami oraz pliki z kodem dodaj do utworzonego brancha i prześlij do repozytorium.
+  - Wykonaj pull request z sforkowanego repozytorium do repozytorum CezaryPukownikImpakt/ZadanieSales.
 
 ## analiza, wnioskowanie, python, pandas
 
