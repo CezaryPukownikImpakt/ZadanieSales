@@ -1,5 +1,7 @@
 # Zadanie rekrutacyjne, 
 
+new_branch-to_pull_request
+
 ## git
   - Utwórz fork tego repozytorium.
   - Sklonuj sforkowane repozytorium na lokalny komputer,
