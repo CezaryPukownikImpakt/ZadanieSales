@@ -65,12 +65,13 @@ def task3(df):
 
     result_percentage.plot()
     plt.savefig('Task3_Line_plot_by_months_2019_vs_top_product_Percentage_Change.png')
+    result_percentage.to_excel('Task3_Line_plot_by_months_2019_vs_top_product_Percentage_Change.xlsx')
     plt.show()
 
     result1.plot()
     plt.savefig('Task3_Line_plot_by_months_2019_vs_top_product.png')
     plt.show()
-    result1.to_excel('Task3.xlsx')
+    result1.to_excel('Task3_Line_plot_by_months_2019_vs_top_product.xlsx')
 
 def task4(df):
 
@@ -81,6 +82,7 @@ def task4(df):
     df1= df1.drop(['Quantity Ordered'], axis = 1)
     df1 = df1.groupby(['Month', 'Month Name', 'City'], as_index=False ).sum()
     df1 = df1.pivot(index = 'Month', columns= 'City', values = 'Total income')
+    df1.to_excel('Task4_Line_plot_by_months_diffrent_cities.xlsx')
     df1.plot()
     plt.savefig('Task4_Line_plot_by_months_diffrent_cities.png')
     plt.show()
@@ -97,6 +99,7 @@ def task4_bar_chart(df):
     df1 = df1.sort_values(by='Total income')
     df1= df1.drop(['Month'], axis = 1)
     df1.reset_index(drop=True)
+    df1.to_excel('Task4_Bar_chart_by_diffrent_cities.xlsx')
     df1.plot.bar(x = 'City', y= 'Total income')
     plt.tight_layout()
     plt.savefig('Task4_Bar_chart_by_diffrent_cities.png')
