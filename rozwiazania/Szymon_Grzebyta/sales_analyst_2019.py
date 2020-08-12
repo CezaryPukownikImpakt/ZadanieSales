@@ -35,13 +35,16 @@ def task2(df):
 
 
 def task3(df):
+    # total income from best selling product vs all products
 
+    # income by month all products combined
     data_frame = df.__deepcopy__(df)
     data_frame = data_frame[[ 'Month', 'Month Name', 'Product','Quantity Ordered', 'Price Each']]
     data_frame['Total income'] = data_frame['Quantity Ordered'] * data_frame['Price Each']
     data_frame = data_frame.drop(['Price Each'], axis = 1)
     df2 = data_frame.groupby(['Month', 'Month Name']).sum()
 
+    # finding best selling product in 2019
     df3 = df.__deepcopy__(df)
     df3 = df3[['Month', 'Month Name', 'Product', 'Quantity Ordered', 'Price Each']]
     df3['Total income'] = df3['Quantity Ordered'] * df3['Price Each']
@@ -50,6 +53,7 @@ def task3(df):
     top_product = top_product.iloc[0]
     top_product = str(top_product.name)
 
+    # data frame of best selling product by months
     data_frame = df.__deepcopy__(df)
     data_frame = data_frame[['Month', 'Month Name', 'Product', 'Quantity Ordered', 'Price Each']]
     data_frame['Total income MacBook Pro Laptop'] = data_frame['Quantity Ordered'] * data_frame['Price Each']
@@ -57,24 +61,26 @@ def task3(df):
     data_frame = data_frame.drop(['Price Each'], axis=1)
     df4 = data_frame.groupby(['Month', 'Month Name']).sum()
 
-
+    # join whole 2019 with ony best product to compare
     result = df2.join(df4, lsuffix=' 2019_combined', rsuffix=' MacBook Pro Laptop')
     print(result)
     result1 = result[['Total income MacBook Pro Laptop', 'Total income' ]]
     result_percentage = result1.pct_change()
 
+    # percentage change by months
     result_percentage.plot()
     plt.savefig('Task3_Line_plot_by_months_2019_vs_top_product_Percentage_Change.png')
     result_percentage.to_excel('Task3_Line_plot_by_months_2019_vs_top_product_Percentage_Change.xlsx')
     plt.show()
 
+    # absolute values by months
     result1.plot()
     plt.savefig('Task3_Line_plot_by_months_2019_vs_top_product.png')
     plt.show()
     result1.to_excel('Task3_Line_plot_by_months_2019_vs_top_product.xlsx')
 
 def task4(df):
-
+    # compare selling by cities on line plot
     df1 = df.__deepcopy__(df)
     df1 = df1[['Month', 'Month Name', 'Product', 'Quantity Ordered', 'Price Each', 'City']]
     df1['Total income'] = df1['Quantity Ordered'] * df1['Price Each']
@@ -89,7 +95,7 @@ def task4(df):
     print(df1)
 
 def task4_bar_chart(df):
-
+    # compare selling by cities on bar chart
     df1 = df.__deepcopy__(df)
     df1 = df1[['Month', 'Month Name', 'Product', 'Quantity Ordered', 'Price Each', 'City']]
     df1['Total income'] = df1['Quantity Ordered'] * df1['Price Each']
