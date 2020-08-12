@@ -20,3 +20,4 @@ pip install numpy
 ## Description
 In the folder we can find all the graphs and excel files required in the command.
 The files are named according to the convention {number_of_task_discription}
+Program needs around 1 minute to make all computations. 

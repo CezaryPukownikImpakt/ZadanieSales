@@ -19,6 +19,7 @@ def task1(df):
            .agg(['min', 'max', 'mean']))
 
     df2 = df2.sort_values(by='max')
+    df2 = df2.round(2)
     print(df2)
     df2.to_excel('Task1.xlsx')
 
@@ -31,6 +32,8 @@ def task2(df):
     df2 = data_frame.groupby(['Product', 'Price Each']).sum()
     df2 = df2.sort_values(by='Total income')
     print(df2)
+    df2 = df2.round(2)
+    df2.to_csv('Task2.csv')
     df2.to_excel('Task2.xlsx')
 
 
@@ -66,7 +69,7 @@ def task3(df):
     print(result)
     result1 = result[['Total income MacBook Pro Laptop', 'Total income' ]]
     result_percentage = result1.pct_change()
-
+    result_percentage = result_percentage.round(2)
     # percentage change by months
     result_percentage.plot()
     plt.savefig('Task3_Line_plot_by_months_2019_vs_top_product_Percentage_Change.png')
@@ -74,6 +77,7 @@ def task3(df):
     plt.show()
 
     # absolute values by months
+    result1 = result1.round(2)
     result1.plot()
     plt.savefig('Task3_Line_plot_by_months_2019_vs_top_product.png')
     plt.show()
@@ -88,6 +92,7 @@ def task4(df):
     df1= df1.drop(['Quantity Ordered'], axis = 1)
     df1 = df1.groupby(['Month', 'Month Name', 'City'], as_index=False ).sum()
     df1 = df1.pivot(index = 'Month', columns= 'City', values = 'Total income')
+    df1 =df1.round(2)
     df1.to_excel('Task4_Line_plot_by_months_diffrent_cities.xlsx')
     df1.plot()
     plt.savefig('Task4_Line_plot_by_months_diffrent_cities.png')
@@ -103,6 +108,7 @@ def task4_bar_chart(df):
     df1= df1.drop(['Quantity Ordered'], axis = 1)
     df1 = df1.groupby(['City'], as_index=False ).sum()
     df1 = df1.sort_values(by='Total income')
+    df1 = df1.round(2)
     df1= df1.drop(['Month'], axis = 1)
     df1.reset_index(drop=True)
     df1.to_excel('Task4_Bar_chart_by_diffrent_cities.xlsx')
@@ -110,6 +116,16 @@ def task4_bar_chart(df):
     plt.tight_layout()
     plt.savefig('Task4_Bar_chart_by_diffrent_cities.png')
     plt.show()
+
+def Task5_extra(df):
+    df1 = df.__deepcopy__(df)
+    df1 = df1[[ 'Hour', 'Full Cost']]
+    df1 = df1.groupby(['Hour'], as_index=False).sum()
+    df1 = df1.sort_values(by='Hour')
+    df1.plot.bar(x = 'Hour', y = 'Full Cost')
+    plt.savefig('Task5_extra_sales_by_hours')
+    plt.show()
+
 
 
 
@@ -152,15 +168,20 @@ if __name__ == "__main__":
     df['Month'] = pd.DatetimeIndex(df['Month']).month
     df['Month Name'] = df['Month'].apply(lambda x: calendar.month_abbr[x])
     df['City'] = df["Purchase Address"].apply(lambda x: re.search(', (.*),', x).group(1))
+    df['Full Cost'] = df['Quantity Ordered'] * df['Price Each']
+    df['Time'] = [datetime.datetime.time(d) for d in df['Order Date']]
+    df['Hour'] = df['Time'].apply(lambda x: x.hour)
     # sorting by months
     df = df.sort_values(by='Month')
     df = df.reset_index(drop=True)
-    df.to_csv('2019_combained.csv', index=False)
+    df = df.round(2)
+    df.to_csv('2019_combined.csv', index=False)
 
     task1(df)
     task2(df)
     task3(df)
     task4(df)
     task4_bar_chart(df)
+    Task5_extra(df)
 
 
