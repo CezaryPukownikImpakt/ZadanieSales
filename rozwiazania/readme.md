@@ -1,1 +1,0 @@
-W tym katalogu utwórz folder o nazwie {imię}_{nazwisko} i umieść w nim pliki wynikowe oraz kod.
